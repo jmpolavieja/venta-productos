@@ -1,0 +1,6 @@
+<h2>Listado de Productos</h2>
+<ul>
+  @for (producto of productos; track $index) {
+    <li (click)="addProducto(producto)">{{producto}}</li>
+  }
+</ul>
