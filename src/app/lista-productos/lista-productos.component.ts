@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FacturaService } from '../servicios/factura.service';
+import { Producto } from '../modelos/producto';
 
 @Component({
   selector: 'app-lista-productos',
@@ -9,14 +10,18 @@ import { FacturaService } from '../servicios/factura.service';
   styleUrl: './lista-productos.component.css'
 })
 export class ListaProductosComponent {
-  productos = [
-    'Teclado Inalámbrico', 'Pantalla 23 pulgadas', 'CPU Gamer', 'Portátil LX3344'
+  productos: Producto[] = [
+    {descripcion: 'Teclado Inalámbrico', precio: 25.98},
+    {descripcion: 'Pantalla 23 pulgadas', precio: 16.67},
+    {descripcion: 'CPU Gamer', precio: 234.65},
+    {descripcion:'Portátil LX3344', precio: 340.45},
+    {descripcion: 'Sauna Digital', precio: 2367, descuento: 10 }
   ];
   // Inyectar el servicio de factura
   facturaServicio = inject(FacturaService);
 
   // Este método le pasa el producto clicado al servicio de facturas
-  addProducto(producto: string) {
+  addProducto(producto: Producto) {
     this.facturaServicio.addProducto(producto);
   }
 }

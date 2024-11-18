@@ -1,0 +1,75 @@
+<div class="container w-50">
+  <form (ngSubmit)="addCliente()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre: </label>
+      <input
+        type="text"
+        [(ngModel)]="cliente.nombre"
+        class="form-control"
+        id="nombre"
+        aria-describedby="nombre"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="apellidos" class="form-label">Apellidos: </label>
+      <input
+        type="text"
+        [(ngModel)]="cliente.apellidos"
+        class="form-control"
+        id="apellidos"
+        aria-describedby="apellidos"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="cif" class="form-label">CIF: </label>
+      <input
+        type="text"
+        [(ngModel)]="cliente.cif"
+        class="form-control"
+        id="cif"
+        aria-describedby="cif"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="direccion" class="form-label">Dirección: </label>
+      <input
+        type="text"
+        [(ngModel)]="cliente.direccion"
+        class="form-control"
+        id="direccion"
+        aria-describedby="direccion"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email: </label>
+      <input
+        type="email"
+        [(ngModel)]="cliente.email"
+        class="form-control"
+        id="email"
+        aria-describedby="email"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Teléfono: </label>
+      <input
+        type="text"
+        [(ngModel)]="cliente.telefono"
+        class="form-control"
+        id="telefono"
+        aria-describedby="telefono"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="id" class="form-label">id: </label>
+      <input
+        type="text"
+        [(ngModel)]="cliente.id"
+        class="form-control"
+        id="id"
+        aria-describedby="id"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

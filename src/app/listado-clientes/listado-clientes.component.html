@@ -1,0 +1,13 @@
+<h2>Listado de Clientes</h2>
+<ul class="list-group">
+  @if(clientes.length > 0) {
+    @for (cliente of clientes; track $index) {
+      <li class="list-group-item">
+        {{cliente.nombre}} {{cliente.apellidos}}
+      </li>
+    }
+  }@else {
+    <li class="list-group-item">No hay clientes registrados.</li>
+  }
+
+</ul>

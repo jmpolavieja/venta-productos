@@ -1,6 +1,10 @@
 <h2>Factura de compra</h2>
+<h3>Cliente: {{factura.cliente}}</h3>
+<h3>Factura Nº: {{factura.numFactura}}</h3>
+<p>Factura: {{factura.fecha}}</p>
 <ul>
-  @for (linea of articulos; track $index) {
-    <li>{{linea}}</li>
+  @for (linea of factura.articulos; track $index) {
+    <li>{{linea.descripcion}} - <span>{{ linea.precio | currency: 'EUR'  }}</span></li>
   }
 </ul>
+<p>Total: {{factura.totalFactura | currency: 'EUR'}}</p>

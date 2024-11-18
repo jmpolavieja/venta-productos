@@ -1,6 +1,14 @@
 <h2>Listado de Productos</h2>
 <ul>
   @for (producto of productos; track $index) {
-    <li (click)="addProducto(producto)">{{producto}}</li>
+    <li (click)="addProducto(producto)">
+      {{producto.descripcion}}
+      - Precio: {{producto.precio}}
+      @if (producto.descuento) {
+        -  descuento: {{producto.descuento}}
+      } @else {
+        - sin descuento
+      }
+    </li>
   }
 </ul>
