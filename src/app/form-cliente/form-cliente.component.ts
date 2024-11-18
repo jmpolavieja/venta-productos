@@ -13,11 +13,18 @@ import { Cliente } from '../modelos/cliente';
 export class FormClienteComponent {
   // Formulario para crear un cliente nuevo
   clientesSvc = inject(ClientesService);
-  cliente!: Cliente;
+  cliente: Cliente = {
+    nombre:'',
+    apellidos: '',
+    id: '',
+    cif: '',
+    direccion: '',
+    email: '',
+    telefono: '',
+  };
 
   addCliente() {
     console.log(this.cliente);
-
     this.clientesSvc.createCliente(this.cliente);
   }
 }

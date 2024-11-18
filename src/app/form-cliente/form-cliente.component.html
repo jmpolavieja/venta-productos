@@ -1,4 +1,5 @@
 <div class="container w-50">
+
   <form (ngSubmit)="addCliente()">
     <div class="mb-3">
       <label for="nombre" class="form-label">Nombre: </label>
@@ -7,7 +8,7 @@
         [(ngModel)]="cliente.nombre"
         class="form-control"
         id="nombre"
-        aria-describedby="nombre"
+        name="nombre"
       />
     </div>
     <div class="mb-3">
@@ -17,7 +18,7 @@
         [(ngModel)]="cliente.apellidos"
         class="form-control"
         id="apellidos"
-        aria-describedby="apellidos"
+        name="apellidos"
       />
     </div>
     <div class="mb-3">
@@ -27,7 +28,7 @@
         [(ngModel)]="cliente.cif"
         class="form-control"
         id="cif"
-        aria-describedby="cif"
+        name="cif"
       />
     </div>
     <div class="mb-3">
@@ -37,7 +38,7 @@
         [(ngModel)]="cliente.direccion"
         class="form-control"
         id="direccion"
-        aria-describedby="direccion"
+        name="direccion"
       />
     </div>
     <div class="mb-3">
@@ -47,7 +48,7 @@
         [(ngModel)]="cliente.email"
         class="form-control"
         id="email"
-        aria-describedby="email"
+        name="email"
       />
     </div>
     <div class="mb-3">
@@ -57,7 +58,7 @@
         [(ngModel)]="cliente.telefono"
         class="form-control"
         id="telefono"
-        aria-describedby="telefono"
+        name="telefono"
       />
     </div>
     <div class="mb-3">
@@ -67,7 +68,7 @@
         [(ngModel)]="cliente.id"
         class="form-control"
         id="id"
-        aria-describedby="id"
+        name="id"
       />
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
